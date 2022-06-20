@@ -2,9 +2,9 @@ import Paciente from "./Paciente";
 
 const ListadoPacientes = ({ pacientes, setPaciente, deletePaciente }) => {
     return (
-        <div className="md:w-1/2 lg:w-3/5 md:h-screen md:overflow-y-scroll">
+        <>
             {pacientes && pacientes.length ? (
-                <>
+                <div className="md:w-1/2 lg:w-3/5 md:h-screen md:overflow-y-scroll">
                     <h2 className="font-black text-3xl text-center">
                         Listado Pacientes
                     </h2>
@@ -24,9 +24,9 @@ const ListadoPacientes = ({ pacientes, setPaciente, deletePaciente }) => {
                             deletePaciente={deletePaciente}
                         />
                     ))}
-                </>
+                </div>
             ) : (
-                <>
+                <div className="md:w-1/2 lg:w-3/5 md:h-screen">
                     <h2 className="font-black text-3xl text-center">
                         No hay Pacientes
                     </h2>
@@ -37,9 +37,9 @@ const ListadoPacientes = ({ pacientes, setPaciente, deletePaciente }) => {
                             y aparecerán en este lugar
                         </span>
                     </p>
-                </>
+                </div>
             )}
-        </div>
+        </>
     );
 };
 export default ListadoPacientes;
